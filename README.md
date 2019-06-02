@@ -36,14 +36,11 @@ Bước 4: Tạo phần HTML markup bao gồm:
 </div>
 ```
 
-Bước 5: query UL ở trong TS để có thể append các phần tử li vào đó.
+Bước 5: sử dụng hàm document.querySelector để trỏ đến phần từ `<ul>` trong HTML (để có thể thêm các phần tử `<li>` vào đó)
 
-Bước 6: cài đặt các đoạn code để xử lý các nhiệm vụ sau:
+Bước 6: triển khai các đoạn code xử lý các nhiệm vụ sau:
 
-- step 1: fetch repo
-
-- step 2: lặp qua mảng các item trả về
-
-- step 3: call hàm để tạo LI element sau đó truyền vào name của từng item ở mỗi vòng lặp
-
-- step 4: call hàm appendChild(item mà hàm createItem trả về) của phần tử ở bước 5 để hiển thị các phần tử đó lên view.
+  1. lấy danh sách repo
+  2. lặp qua mảng các `item` trả về
+  3. gọi hàm document.createElement để tạo thẻ `<li>` sau đó truyền vào `name` của từng `item` ở mỗi vòng lặp
+  4. gọi hàm appendChild của phần tử ở bước 5 để hiển thị các phần tử đó lên view.
